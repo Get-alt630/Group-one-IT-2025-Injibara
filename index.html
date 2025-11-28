@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Injibara University - Graduation Clearance Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./ForRegister.css">
+  <link rel="stylesheet" href="./Users.css">
+</head>
+<body>
+    <header   style="background-color: rgb(175, 171, 171);color: white;">
+          <div class="logo">
+                   <div class="logo-text" >
+                    <img src="../Images/logInjibara.jpg" alt="INU"><br>                   
+                    <span style="color: white;">INU Graduated students <br> Digital Clearance</span></div>
+            </div>
+             <div class="headers">
+        <div class="container header-container">
+            
+            <nav>
+                <ul >
+                    <li><a href="./index.html" style="color: aliceblue;">Home</a></li>
+                    <li><a href="#"style="color: aliceblue;">About</a></li>
+                    <li><a href="#contact"style="color: aliceblue;">Contact</a></li>
+                    <li><a href="#process"style="color: aliceblue;">Process</a></li>
+                    <li> <a href="./FAQ.html"style="color: aliceblue;">FAQ</a></li>
+                      <div class="auth-buttons">
+                    <button class="btn btn-outline" id="loginBtn">Student Login</button>
+                    <button class="btn btn-primary" id="registerBtn">Register</button>
+                </div>
+                </ul>
+            </nav>
+            <div class="mobile-menu">☰</div>
+        </div>
+    
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <!-- Placeholder for university logo -->
+                    
+                </div>
+              
+            </div>
+        </div>
+     </div>
+    </header>
+
+   
+     
+    <section class="hero">
+         <h1 class="slids"></h1
+        <div class="container">
+          
+             <div class="hero-content">
+                 
+                <p  style="font-size:44px">Complete your graduation requirements efficiently with our online clearance system. Track your progress in real-time and get notified when each department approves your clearance.</p>
+                <button class="btn btn-primary" id="heroLoginBtn">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Use Our Clearance System?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Save Time</h3>
+                    <p>No more waiting in long lines. Complete your clearance requirements online from anywhere.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your clearance status in real-time across all university departments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Get Notified</h3>
+                    <p>Receive instant notifications when a department approves your clearance.</p>
+                        <h1 id="process"></h1>
+                </div>
+                
+            </div>
+        </div>
+     
+    </section>
+   
+    <!-- Clearance Process Section -->
+    <section class="clearance-process" >
+      
+        <div class="container" >
+              
+            <h2 class="section-title" >Clearance Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number" >1</div>
+                    <h3>Register/Login</h3>
+                    <p>Access the portal using your student credentials</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Check Requirements</h3>
+                    <p>Review clearance requirements from all departments</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Submit Requests</h3>
+                    <p>Submit clearance requests to relevant departments</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor approval status from your dashboard</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Receive Certificate</h3>
+                    <p>Download your clearance certificate once all approvals are complete</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Student Login</h2>
+                <button class="close-modal" id="closeLoginModal">&times;</button>
+            </div>
+            <div class="success-message" id="loginSuccessMessage">
+                Registration successful! You can now login with your credentials.
+            </div>
+            <form id="loginForm" action="./Register.php"method="post">
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" name="ID" class="form-control" placeholder="Enter your student ID" required>
+                    <div class="error-message" id="studentIdError">Please enter a valid student ID</div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="pass" class="form-control" placeholder="Enter your password" required>
+                    <div class="error-message" id="passwordError">Please enter your password</div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;" name="logined">Login</button>
+            </form>
+            <div class="form-footer">
+                <p>Don't have an account? <a href="#" id="switchToRegister">Register here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Student Registration</h2>
+                <button class="close-modal" id="closeRegisterModal">&times;</button>
+            </div>
+            <form id="registerForm" action="Register.php"method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="Enter your first name" required>
+                        <div class="error-message" id="firstNameError">Please enter your first name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Middle Name</label>
+                        <input type="text" id="MiddleName" class="form-control" placeholder="Enter your Middle name" required>
+                        <div class="error-message" id="lastNameError">Please enter your last name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="Enter your last name" required>
+                        <div class="error-message" id="lastNameError">Please enter your last name</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regStudentId">Student ID</label>
+                    <input type="text" id="regStudentId" class="form-control" placeholder="Enter your student ID" required>
+                    <div class="error-message" id="regStudentIdError">Please enter a valid student ID</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                    <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" class="form-control" required>
+                        <option value="">Select your department</option>
+                        <option value="computer-science">Computer Science</option>
+                        <option value="business">Business Administration</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="education">Education</option>
+                        <option value="health">Health Sciences</option>
+                        <option value="law">Law</option>
+                    </select>
+                    <div class="error-message" id="departmentError">Please select your department</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="program">Program</label>
+                    <select id="program" class="form-control" required>
+                        <option value="">Select your program</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="masters">Masters</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                    <div class="error-message" id="programError">Please select your program</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="graduationYear">Expected Graduation Year</label>
+                    <select id="graduationYear" class="form-control" required>
+                        <option value="">Select graduation year</option>
+                        <option value="2023">2024</option>
+                        <option value="2024">2025</option>
+                        <option value="2025">2026</option>
+                        <option value="2026">2027</option>
+                    </select>
+                    <div class="error-message" id="graduationYearError">Please select your graduation year</div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" class="form-control" placeholder="Create a password" required>
+                        <div class="error-message" id="regPasswordError">Password must be at least 8 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" required>
+                        <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="checkbox" id="agreeTerms" required>
+                    <label for="agreeTerms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                    <div class="error-message" id="agreeTermsError">You must agree to the terms and conditions</div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+            </form>
+            <div class="form-footer">
+                <p>Already have an account? <a href="#" id="switchToLogin">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student Dashboard -->
+    <section class="dashboard container" id="dashboard">
+        <div class="user-info">
+            <h2>Welcome, <span id="studentName">Abebe Kebede</span></h2>
+            <p>Student ID: <span id="displayStudentId">IU/2019/1234</span></p>
+            <p>Department: <span id="studentDept">Computer Science</span></p>
+            <p>Expected Graduation: <span id="gradDate">June 2023</span></p>
+        </div>
+        
+        <div class="clearance-status">
+            <h2>Clearance Status</h2>
+            <div class="department">
+                <div>
+                    <h3>Registrar's Office</h3>
+                    <p>Verify academic records and graduation eligibility</p>
+                </div>
+                <div class="status completed">Completed</div>
+            </div>
+            <div class="department">
+                <div>
+                    <h3>Library</h3>
+                    <p>Return all borrowed books and clear library fines</p>
+                </div>
+                <div class="status completed">Completed</div>
+            </div>
+            <div class="department">
+                <div>
+                    <h3>Finance Department</h3>
+                    <p>Clear all outstanding tuition and fee payments</p>
+                </div>
+                <div class="status pending">Pending</div>
+            </div>
+            <div class="department">
+                <div>
+                    <h3>Department Chair</h3>
+                    <p>Approval from your academic department</p>
+                </div>
+                <div class="status completed">Completed</div>
+            </div>
+            <div class="department">
+                <div>
+                    <h3>Student Affairs</h3>
+                    <p>Clear any disciplinary issues</p>
+                </div>
+                <div class="status pending">Pending</div>
+            </div>
+            <div class="department">
+                <div>
+                    <h3>ICT Center</h3>
+                    <p>Return any borrowed equipment and clear ICT accounts</p>
+                </div>
+                <div class="status completed">Completed</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="btn btn-primary" id="printCertificate" disabled>Print Clearance Certificate</button>
+            <p style="margin-top: 10px; color: var(--danger); font-size: 0.9rem;">Complete all clearance requirements to enable this button</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Injibara University</h3>
+                    <p>Committed to excellence in education, research, and community service.</p>
+                </div>
+                <div class="footer-section" id="contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Injibara, Awi Zone, Ethiopia</p>
+                    <p><i class="fas fa-phone"></i> +251918939748</p>
+                    <p><i class="fas fa-envelope"></i> IT@injibarauniversity.edu.et</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#" style="color: white; text-decoration: none;">University Website</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Academic Calendar</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Student Portal</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Help & Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IT G1 3rd Year Injibara university . All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="./ForRegister.js"></script>
+<script src="./Users.js"></script>
+
+</body>
+</html>

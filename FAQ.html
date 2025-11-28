@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive FAQ Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./Users.css">
+</head>
+<body>
+ <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+        
+                <div class="logo-text" ><img src="../Images/logInjibara.jpg" alt="INU"> <br>INU 
+                    
+                    <span> Graduated students Clearance</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="./index.html">Process</a></li>
+                    <li><a href="./index.html">My Clearance</a></li>
+                    <li><a href="./index.html">Departments</a></li>
+                    <li><a href="./FAQ.html">FAQ</a></li>
+                    <li><a href="./index.html">Contact</a></li>
+                    <li><a href="http://localhost/ProjectIP2/Users/loginForm.php" class="btn btn-outline" id="loginBtn">Student Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </header><br><br>
+
+
+    <section class="faq" id="faq">
+        <div class="container faq-container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What documents do I need for clearance?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You will need your student ID card, clearance form (which can be printed from this portal), and any department-specific documents. Some departments may require additional items like laboratory equipment, library books, or financial receipts.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How long does the clearance process take?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The clearance process typically takes 3-5 working days if all requirements are met. However, it may take longer if there are outstanding issues that need to be resolved. We recommend starting the process at least two weeks before your intended graduation date.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What happens if I have outstanding fees?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You must clear all outstanding fees before your clearance can be approved. Visit the Finance Office to settle any balances. Once paid, bring the receipt to update your clearance status in the system.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I complete clearance if I'm not on campus?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>For certain departments, you may authorize a representative with a signed letter to complete the clearance on your behalf. However, some departments require your physical presence. Contact the specific department for their requirements.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if I lost my student ID card?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>If you've lost your student ID card, you need to visit the Student Affairs Office to report it and obtain a replacement. There may be a fee for the replacement card.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all FAQ items
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            // Add click event to each FAQ question
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Toggle active class on the clicked item
+                    item.classList.toggle('active');
+                    
+                    // Close other FAQ items (optional - remove if you want multiple open)
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
