@@ -336,7 +336,7 @@ nav ul li a:hover {
     color: rgb(249, 248, 250);
     text-align: center;
     padding:  600px;
-  background: url(../Images/InjibaraUni.jpg);
+  background: url(InjibaraUni.jpg);
  background-repeat: no-repeat;
    background-position-y:center; 
    background-size: cover;   
@@ -355,29 +355,29 @@ margin-left: 2%;
     @keyframes backgroundSlider {
 
         89% {
-            background: url("../Images/image.png");
+            background: url("image.png");
             background-repeat: no-repeat;
 
         }
 
         23% {
-            background: url("../Images/Aprove.png");
+            background: url("Aprove.png");
             background-repeat: no-repeat;
 
         }
 
         67% {
-            background: url("../Images/logInjibara.jpg");
+            background: url("logInjibara.jpg");
             background-repeat: no-repeat;
         }
 
         54% {
-            background: url("../Images/imageFAQ.png");
+            background: url("./imageFAQ.png");
             background-repeat: no-repeat;
         }
 
         9% {
-            background: url("../Images/imageStatus.png ");
+            background: url("imageStatus.png ");
             background-repeat: no-repeat;
 
         }
@@ -1362,4 +1362,5 @@ margin-left: 2%;
             align-items: flex-start;
             gap: 15px;
         }
+
     }
