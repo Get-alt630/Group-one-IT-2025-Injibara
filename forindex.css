@@ -107,29 +107,29 @@
  @keyframes backgroundSlider {
 
      89% {
-         background: url("../Images/imageFAQ.png");
+         background: url("./images/imageFAQ.png");
          background-repeat: no-repeat;
 
      }
 
      23% {
-         background: url("../Images/Aprove.png");
+         background: url("./images/Aprove.png");
          background-repeat: no-repeat;
 
      }
 
      67% {
-         background: url("../Images/logInjibara.jpg");
+         background: url("./images/logInjibara.jpg");
          background-repeat: no-repeat;
      }
 
      54% {
-         background: url("../Images/imageFAQ.png");
+         background: url("./images/imageFAQ.png");
          background-repeat: no-repeat;
      }
 
      9% {
-         background: url("../Images/imageStatus.png ");
+         background: url("./images/imageStatus.png ");
          background-repeat: no-repeat;
 
      }
@@ -400,4 +400,5 @@
      .step:not(:last-child)::after {
          display: none;
      }
+
  }
