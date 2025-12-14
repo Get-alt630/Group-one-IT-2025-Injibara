@@ -27,10 +27,10 @@
                     <li><a href="#contact"style="color: aliceblue;">Contact</a></li>
                     <li><a href="#process"style="color: aliceblue;">Process</a></li>
                     <li> <a href="./FAQ.html"style="color: aliceblue;">FAQ</a></li>
-                      <div class="auth-buttons">
-                    <button class="btn btn-outline" id="loginBtn">Student Login</button>
-                    <button class="btn btn-primary" id="registerBtn">Register</button>
-                </div>
+                  
+                    <li> <button class="btn btn-outline" id="loginBtn">Student Login</button></li>
+                    <li>  <button class="btn btn-primary" id="registerBtn">Register</button></li>
+             
                 </ul>
             </nav>
             <div class="mobile-menu">☰</div>
@@ -244,12 +244,12 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="regPassword">Password</label>
-                        <input type="password" id="regPassword" class="form-control" placeholder="Create a password" required>
+                        <input type="password" id="Password" class="form-control" placeholder="Create a password" required>
                         <div class="error-message" id="regPasswordError">Password must be at least 8 characters</div>
                     </div>
                     <div class="form-group">
                         <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" required>
+                        <input type="password" id="confirm" class="form-control" placeholder="Confirm your password" required>
                         <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
                     </div>
                 </div>
@@ -260,7 +260,7 @@
                     <div class="error-message" id="agreeTermsError">You must agree to the terms and conditions</div>
                 </div>
                 
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%;"  onclick="validatePass();">Register</button>
             </form>
             <div class="form-footer">
                 <p>Already have an account? <a href="#" id="switchToLogin">Login here</a></p>
@@ -351,12 +351,39 @@
         </div>
     </footer>
 
+
+
+
+    <script>
+
+function validatePass(){
+let confirmPasswordError=document.getElementById("confirmPasswordError");
+let pass= document.getElementById("password");
+    let confirmPass= document.getElementById("confirm"); 
+    if(pass!==confirmPass){
+
+confirmPasswordError.innerTex="the confirm password and register password not macth!";
+        
+        
+    }
+    else if(pass&&confirmPass<8){
+        confirmPasswordError.innerTex="the password You have eneterd is weak try again";
+    }
+    else{
+   alert("You have registerd successfully");
+
+    }
+
+}
+        
+    </script>
 <script src="./ForRegister.js"></script>
 <script src="./Users.js"></script>
 
 </body>
 
 </html>
+
 
 
 
