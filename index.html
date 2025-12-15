@@ -325,7 +325,7 @@
         
         <div style="text-align: center; margin-top: 30px;">
             <button class="btn btn-primary" id="printCertificate" disabled>Print Clearance Certificate</button>
-            <p style="margin-top: 10px; color: var(--danger); font-size: 0.9rem;">Complete all clearance requirements to enable this button</p>
+            <p style="margin-top: 10px; color:white; font-size: 0.9rem;">Complete all clearance requirements to enable this button</p>
         </div>
     </section>
 
@@ -357,17 +357,15 @@
     <script>
 
 function validatePass(){
-let confirmPasswordError=document.getElementById("confirmPasswordvalid");
 let pass= document.getElementById("password");
     let confirmPass= document.getElementById("confirm"); 
     if(pass!==confirmPass){
 
-confirmPasswordError.innerTex="the confirm password and register password not macth!";
-        
+alert("the confirm password and register password not macth!");
         
     }
     else if(pass&&confirmPass<8){
-        confirmPasswordError.innerTex="the password You have eneterd is weak try again";
+       alert("the password You have eneterd is weak try again");
     }
     else{
    alert("You have registerd successfully");
@@ -383,6 +381,7 @@ confirmPasswordError.innerTex="the confirm password and register password not ma
 </body>
 
 </html>
+
 
 
 
